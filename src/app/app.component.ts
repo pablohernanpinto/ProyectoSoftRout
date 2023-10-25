@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  
+  public BackGroundColor: string = '';
+
+
   title = 'APP_Proyecto2';
 }
