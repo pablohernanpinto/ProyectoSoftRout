@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AllConveniosComponent } from './components/page/all-convenios/all-convenios.component';
 import { AddComComponent } from './components/page/add-com/add-com.component';
 import { HeaderComponent } from './components/page/header/header.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HeaderComponent } from './components/page/header/header.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

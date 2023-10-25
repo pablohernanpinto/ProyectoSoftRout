@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-com',
@@ -8,29 +10,34 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./add-com.component.css']
 })
 export class AddComComponent {
-  convenioForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.convenioForm = this.fb.group({
-      nombreInstitucion: ['', Validators.required],
-      unidadAcademica: ['', Validators.required],
-      pais: ['', Validators.required],
-      alcance: ['', Validators.required],
-      tipoInstitucion: ['', Validators.required],
-      nombreConvenio: ['', Validators.required],
-      tipoConvenio: ['', Validators.required],
-      vigencia: ['', Validators.required],
-      anoFirma: ['', Validators.required],
-      tipoFirma: ['', Validators.required],
-      cupos: ['', Validators.required],
-      documentos: ['', Validators.required]
-    });
+
+  formulario = {
+    nombreInstitucion: '',
+    unidadAcademica: '',
+    pais: '',
+    alcance: '',
+    tipoInstitucion: '',
+    nombreConvenio: '',
+    tipoConvenio: '',
+    vigencia: '',
+    anoFirma: '',
+    tipoFirma: '',
+    cupos: '',
+    documentos: '',    
+
+  };
+  
+  addConvenio(formContact: NgForm) {
+    if (formContact.valid) {
+      alert("SE A INGRESADO EL CONVENIO");
+      console.log(this.formulario);
+    } else {
+      alert("INGRESO NO VALIDO");
+    }
+  }
   }
 
-  addConvenio() {
-    // Aquí es donde enviarías la información al backend
-    const datos = { datosInstitucion: this.convenioForm.value.datosInstitucion, datosConvenio: this.convenioForm.value.datosConvenio };
-    // Llamada a tu backend
-  }
 
-}
+
+
