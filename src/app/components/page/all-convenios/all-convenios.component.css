@@ -3,11 +3,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
  /* Esto asegura que el cuerpo ocupe toda la altura de la ventana */
 }
 
 .fullElements {
-
     text-align: center; /* Esto centra el texto dentro de los elementos */
     padding: 20px; /* Ajusta el espacio alrededor del contenedor */
     border-collapse: collapse;
@@ -15,6 +15,7 @@ body {
 
 .listTittle th {
     padding-inline: 100px; /* Ajusta el espacio alrededor de las celdas del encabezado */
+    
 }
 
 .listElements td {
@@ -29,7 +30,7 @@ th, td {
     border-bottom: 1px solid #253e85;}
 
 
-.listElements:hover:hover {
-    background-color: #253e85;
+.listElements:hover {
+    background-color: #869ad1;
     color: aliceblue;
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-com.component.css']
 })
 export class AddComComponent {
-
+  constructor(private router: Router) { }
 
   formulario = {
     nombreInstitucion: '',
@@ -35,6 +36,11 @@ export class AddComComponent {
     } else {
       alert("INGRESO NO VALIDO");
     }
+  }
+
+  PaginaPrincipal(){
+    this.router.navigate(['/page']);
+
   }
   }
 

@@ -26,7 +26,7 @@ button{
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     background-color: #253e85;
-    border-color: #253e85;
+
     border-radius: 5cm;
     color: white;
     padding: 16px 32px;
@@ -38,8 +38,8 @@ button{
   
   
 button:hover {
-    background-color: white ;
-    color:#253e85;
+    background-color: #869ad1 ;
+    color:white;
 }
 
 

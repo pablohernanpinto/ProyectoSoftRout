@@ -9,8 +9,16 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) { }
 
+  
   goinAddCon() {
     this.router.navigate(['/Add-Com']);
     console.log(this.router.url);
+
+  }
+  
+  goMainPage() {
+    this.router.navigate(['/page']);
+    console.log(this.router.url);
+    
   }
 }
