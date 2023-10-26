@@ -7,24 +7,27 @@
 </head>
 <body>
     <table class="fullElements">
-        <thead>
-          <tr class="listTittle">
-            <th>Nombre del Convenio</th>
-            <th>Tipo de Convenio</th>
-            <th>Vigencia</th>
-            <th>Año de Firma</th>
-            <th>Tipo de Firma</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="listElements" *ngFor="let convenio of convenios">
-            <td>{{ convenio.NOMBRE_CONV }}</td>
-            <td>{{ convenio.TIPO_CONV }}</td>
-            <td>{{ convenio.VIGENCIA }}</td>
-            <td>{{ convenio.ANO_FIRMA }}</td>
-            <td>{{ convenio.TIPO_FIRMA }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <thead>
+        <tr class="listTittle">
+          <th>Nombre del Convenio</th>
+          <th>Tipo de Convenio</th>
+          <th>Vigencia</th>
+          <th>Año de Firma</th>
+          <th>Tipo de Firma</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr  (click)="openModal()" class="listElements" *ngFor="let convenio of convenios">
+          <td>{{ convenio.NOMBRE_CONV }}</td>
+          <td>{{ convenio.TIPO_CONV }}</td>
+          <td>{{ convenio.VIGENCIA }}</td>
+          <td>{{ convenio.ANO_FIRMA }}</td>
+          <td>{{ convenio.TIPO_FIRMA }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
 </body>
 </html>

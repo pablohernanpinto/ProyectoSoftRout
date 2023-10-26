@@ -34,3 +34,12 @@ th, td {
     background-color: #869ad1;
     color: aliceblue;
 }
+
+
+
+ .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }

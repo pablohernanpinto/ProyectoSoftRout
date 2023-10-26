@@ -13,7 +13,7 @@ export class HeaderComponent {
   goinAddCon() {
     this.router.navigate(['/Add-Com']);
     console.log(this.router.url);
-
+    
   }
   
   goMainPage() {
