@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody >
-        <tr  (click)="openModal()" class="listElements" *ngFor="let convenio of convenios">
+        <tr  (click)="openModal(i)" class="listElements" *ngFor="let convenio of convenios; let i = index">
           <td>{{ convenio.NOMBRE_CONV }}</td>
           <td>{{ convenio.TIPO_CONV }}</td>
           <td>{{ convenio.VIGENCIA }}</td>
@@ -27,7 +27,7 @@
       </tbody>
     </table>
 
-
+    
 
 </body>
 </html>

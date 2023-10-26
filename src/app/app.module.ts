@@ -15,7 +15,7 @@ import { AddComComponent } from './components/page/add-com/add-com.component';
 import { HeaderComponent } from './components/page/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './components/page/all-convenios/modal/modal.component';
 
 @NgModule({
@@ -39,7 +39,8 @@ import { ModalComponent } from './components/page/all-convenios/modal/modal.comp
     MatDialogModule,
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

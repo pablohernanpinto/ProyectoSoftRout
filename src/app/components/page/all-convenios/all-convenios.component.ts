@@ -13,15 +13,15 @@ export class AllConveniosComponent {
 
   constructor(private http: HttpClient,public dialog: MatDialog) { }
 
-  openModal() {
-    // Utilizando el servicio (opcional)
-    // this.modalService.openModal();
-  
-    // O abrir el modal directamente
-    const dialogRef = this.dialog.open(ModalComponent, { });
-
+  openModal(Index: number) {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      data: { Index:Index } // Aquí se cierra correctamente la llave
+    });
   }
-
+  
+  pruebaDeIndex(Index: number){
+    console.log(Index)
+  }
 
   ngOnInit() {
     this.hacerPeticion(); 
@@ -32,6 +32,7 @@ export class AllConveniosComponent {
     const url = 'http://localhost:2020/getConvenios';
     this.http.get(url).subscribe((data: any) => {
       this.convenios = data.convenios;
+      console.log(this.convenios)
     });
   }
 

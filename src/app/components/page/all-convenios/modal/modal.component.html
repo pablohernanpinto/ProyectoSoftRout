@@ -1,17 +1,33 @@
-<!-- The Modal -->
 <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-
-        <h2>Modal Header</h2>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the Modal Body</p>
-        <p>Some other text...</p>
-      </div>
-
+  <div class="modal-content">
+    <div class="modal-header">
+      <span (click)="closeDialog()" class="close">&times;</span>
+      <h2  *ngIf="mostrarEnPantalla">{{ mostrarEnPantalla.NOMBRE_CONV }}</h2>
     </div>
-  
+    <div class="modal-body">
+      <ng-container *ngIf="mostrarEnPantalla">
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.NOMBRE_CONV }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.TIPO_CONV }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.VIGENCIA }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.ANO_FIRMA }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.TIPO_FIRMA }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.CUPOS }} </h3>
+        <h3>Nombre de convenio: {{ mostrarEnPantalla.DOCUMENTOS }} </h3>
+        
+      </ng-container>
+    </div>
   </div>
+</div>
+
+
+<!--
+
+              "ID": convenio[0],
+            "NOMBRE_CONV": convenio[1],
+            "TIPO_CONV": convenio[2],
+            "VIGENCIA": convenio[3],
+            "ANO_FIRMA": convenio[4],
+            "TIPO_FIRMA": convenio[5],
+            "CUPOS": convenio[6],
+            "DOCUMENTOS": convenio[7]
+-->
