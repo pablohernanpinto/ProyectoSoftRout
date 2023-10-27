@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 
@@ -11,7 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-com.component.css']
 })
 export class AddComComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router,private http: HttpClient,public dialog: MatDialog) { }
+
 
   formulario = {
     nombreInstitucion: '',
@@ -19,11 +22,11 @@ export class AddComComponent {
     pais: '',
     alcance: '',
     tipoInstitucion: '',
-    nombreConvenio: '',
-    tipoConvenio: '',
+    nombre_conv: '',
+    tipo_conv: '',
     vigencia: '',
-    anoFirma: '',
-    tipoFirma: '',
+    ano_firma: '',
+    tipo_firma: '',
     cupos: '',
     documentos: '',    
 
@@ -41,8 +44,17 @@ export class AddComComponent {
   PaginaPrincipal(){
     this.router.navigate(['/page']);
 
+    this.http.post('http://localhost:3000/api/convenios/', this.formulario).subscribe(
+      (data: any) => {console.log(data); // Esto imprimirá la respuesta del servidor en la consola del navegador
+      },
+      (error) => {
+        console.error(error); // Esto imprimirá cualquier error en la consola del navegador
+      }
+    );
   }
+
   }
+  
 
 
 

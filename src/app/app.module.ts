@@ -10,13 +10,13 @@ import { PageComponent } from './components/page/page.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { AllConveniosComponent } from './components/page/all-convenios/all-convenios.component';
-import { AddComComponent } from './components/page/add-com/add-com.component';
-import { HeaderComponent } from './components/page/header/header.component';
+import { AllConveniosComponent } from './components/all-convenios/all-convenios.component';
+import { AddComComponent } from './components/modals/add-com/add-com.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
-import { ModalComponent } from './components/page/all-convenios/modal/modal.component';
+import { ModalComponent } from './components/modals/modalInfo/modal.component';
 
 @NgModule({
   declarations: [

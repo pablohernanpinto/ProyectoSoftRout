@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from './modal/modal.component';
+import { ModalComponent } from '../modals/modalInfo/modal.component';
 
 @Component({
   selector: 'app-all-convenios',
@@ -14,14 +14,11 @@ export class AllConveniosComponent {
   constructor(private http: HttpClient,public dialog: MatDialog) { }
 
   openModal(Index: number) {
-    const dialogRef = this.dialog.open(ModalComponent, {
-      data: { Index:Index } // Aquí se cierra correctamente la llave
-    });
+
+    const dialogRef = this.dialog.open(ModalComponent, {data: { Index:Index }});
   }
   
-  pruebaDeIndex(Index: number){
-    console.log(Index)
-  }
+
 
   ngOnInit() {
     this.hacerPeticion(); 
@@ -29,10 +26,9 @@ export class AllConveniosComponent {
 
 
   hacerPeticion() {
-    const url = 'http://localhost:2020/getConvenios';
+    const url = 'http://localhost:3000/api/convenios';
     this.http.get(url).subscribe((data: any) => {
-      this.convenios = data.convenios;
-      console.log(this.convenios)
+      this.convenios = data;
     });
   }
 

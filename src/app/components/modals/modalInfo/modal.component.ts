@@ -22,10 +22,9 @@ export class ModalComponent {
   }
 
   hacerPeticion() {
-    const url = 'http://localhost:2020/getConvenios';
+    const url = 'http://localhost:3000/api/convenios';
     this.http.get(url).subscribe((data: any) => {
-      this.convenios = data.convenios;
-      // Ahora puedes acceder a this.convenios sin problemas
+      this.convenios = data;
       this.mostrarEnPantalla = (this.convenios[this.data.Index]);
     });
   }

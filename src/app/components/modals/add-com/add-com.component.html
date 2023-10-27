@@ -30,13 +30,13 @@
             <input type="text" name="tipoInstitucion" [(ngModel)]="formulario.tipoInstitucion" required  #tipoInstitucion="ngModel">
     
             <label for="nombreConvenio">Nombre del Convenio</label>
-            <input type="text" name="nombreConvenio" [(ngModel)]="formulario.nombreConvenio" required  #nombreConvenio="ngModel">
+            <input type="text" name="nombreConvenio" [(ngModel)]="formulario.nombre_conv" required  #nombreConvenio="ngModel">
     
             <label for="tipoConvenio">Tipo de Convenio</label>
-            <input type="text" name="tipoConvenio" [(ngModel)]="formulario.tipoConvenio" required  #tipoConvenio="ngModel">
+            <input type="text" name="tipoConvenio" [(ngModel)]="formulario.tipo_conv" required  #tipoConvenio="ngModel">
     
             <label for="tipoFirma">Tipo de Firma</label>
-            <input type="text" name="tipoFirma" [(ngModel)]="formulario.tipoFirma" required  #tipoFirma="ngModel">
+            <input type="text" name="tipoFirma" [(ngModel)]="formulario.tipo_firma" required  #tipoFirma="ngModel">
     
             <label for="cupos">Cupos</label>
             <input type="text" name="cupos" [(ngModel)]="formulario.cupos" required  #cupos="ngModel">
@@ -48,8 +48,8 @@
             <label  for="vigencia">Vigencia</label>
             <input type="date" name="vigencia" [(ngModel)]="formulario.vigencia" required  #vigencia="ngModel"> 
     
-            <label class="Fechas" for="anoFirma">Año de Firma</label>
-            <input type="date" name="anoFirma" [(ngModel)]="formulario.anoFirma"  required #anoFirma="ngModel"><br><br>
+            <label class="Fechas" for="ano_firma">Año de Firma</label>
+            <input type="date" name="ano_firma" [(ngModel)]="formulario.ano_firma"  required #anoFirma="ngModel"><br><br>
 
 
             <button type="submit">AGREGAR</button>
@@ -64,6 +64,19 @@
 
 
 <!--
+
+  tipoInstitucion: '',
+    nombre_conv: '',
+    tipo_conv: '',
+    vigencia: '',
+    ano_firma: '',
+    tipo_firma: '',
+    cupos: '',
+    documentos: '',    
+
+  };
+
+
 
             <label for="pais">País</label>
             <input type="text" name="pais" [(ngModel)]="formulario.pais"  required  #pais="ngModel">
